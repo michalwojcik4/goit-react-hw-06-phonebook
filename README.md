@@ -1,113 +1,60 @@
-# React homework template
+# Phonebook
 
-Этот проект был создан при помощи
-[Create React App](https://github.com/facebook/create-react-app). Для знакомства
-и настройки дополнительных возможностей
-[обратись к документации](https://facebook.github.io/create-react-app/docs/getting-started).
+App This is a simple phonebook application built with React and managed state
+using Redux Toolkit.
 
-## Создание репозитория по шаблону
+## Features
 
-Используй этот репозиторий организации GoIT как шаблон для создания репозитория
-своего проекта. Для этого нажми на кнопку `«Use this template»` и выбери опцию
-`«Create a new repository»`, как показано на изображении.
+- Add contacts with names and phone numbers.
+- Delete contacts.
+- Filter contacts by name.
 
-![Creating repo from a template step 1](./assets/template-step-1.png)
+## Getting Started
 
-На следующем шаге откроется страница создания нового репозитория. Заполни поле
-его имени, убедись что репозиторий публичный, после чего нажми кнопку
-`«Create repository from template»`.
+1. Clone the repository:
 
-![Creating repo from a template step 2](./assets/template-step-2.png)
+`git clone https://github.com/your-username/goit-react-hw-04-phonebook.git`
 
-После того как репозиторий будет создан, необходимо перейти в настройки
-созданного репозитория на вкладку `Settings` > `Actions` > `General` как
-показано на изображении.
+2. Navigate to the project directory:
 
-![Settings GitHub Actions permissions step 1](./assets/gh-actions-perm-1.png)
+`cd goit-react-hw-04-phonebook`
 
-Проскролив страницу до самого конца, в секции `«Workflow permissions»` выбери
-опцию `«Read and write permissions»` и поставь галочку в чекбоксе. Это
-необходимо для автоматизации процесса деплоя проекта.
+3. Install dependencies:
 
-![Settings GitHub Actions permissions step 2](./assets/gh-actions-perm-2.png)
+`npm install`
 
-Теперь у тебя есть личный репозиторий проекта, со структурой файлов и папок
-репозитория-шаблона. Далее работай с ним как с любым другим личным репозиторием,
-клонируй его себе на компьютер, пиши код, делай коммиты и отправляй их на
-GitHub.
+4. Start the development server:
 
-## Подготовка к работе
+`npm start`
 
-1. Убедись что на компьютере установлена LTS-версия Node.js.
-   [Скачай и установи](https://nodejs.org/en/) её если необходимо.
-2. Установи базовые зависимости проекта командой `npm install`.
-3. Запусти режим разработки, выполнив команду `npm start`.
-4. Перейди в браузере по адресу [http://localhost:3000](http://localhost:3000).
-   Эта страница будет автоматически перезагружаться после сохранения изменений в
-   файлах проекта.
+5. Open your browser and visit http://localhost:3000 to use the phonebook app.
 
-## Деплой
+## How to Use
 
-Продакшн версия проекта будет автоматически проходить линтинг, собираться и
-деплоиться на GitHub Pages, в ветку `gh-pages`, каждый раз когда обновляется
-ветка `main`. Например, после прямого пуша или принятого пул-реквеста. Для этого
-необходимо в файле `package.json` отредактировать поле `homepage`, заменив
-`your_username` и `your_repo_name` на свои, и отправить изменения на GitHub.
+- Add Contact:
 
-```json
-"homepage": "https://your_username.github.io/your_repo_name/"
-```
+  - Fill in the name and phone number in the input fields.
+  - Click the "Add Contact" button.
 
-Далее необходимо зайти в настройки GitHub-репозитория (`Settings` > `Pages`) и
-выставить раздачу продакшн версии файлов из папки `/root` ветки `gh-pages`, если
-это небыло сделано автоматически.
+- Delete Contact:
 
-![GitHub Pages settings](./assets/repo-settings.png)
+  - Click the "Delete" button next to the contact you want to remove.
 
-### Статус деплоя
+- Filter Contacts:
+  - Type in the search input to filter contacts by name.
 
-Статус деплоя крайнего коммита отображается иконкой возле его идентификатора.
+## Technologies Used React
 
-- **Желтый цвет** - выполняется сборка и деплой проекта.
-- **Зеленый цвет** - деплой завершился успешно.
-- **Красный цвет** - во время линтинга, сборки или деплоя произошла ошибка.
+- Redux
+- Toolkit
+- Nanoid for generating unique IDs
+- CSS for styling
 
-Более детальную информацию о статусе можно посмотреть кликнув по иконке, и в
-выпадающем окне перейти по ссылке `Details`.
+## Contributing
 
-![Deployment status](./assets/deploy-status.png)
+Feel free to contribute to the development of this phonebook app by opening
+issues or pull requests.
 
-### Живая страница
+## Author
 
-Через какое-то время, обычно пару минут, живую страницу можно будет посмотреть
-по адресу указанному в отредактированном свойстве `homepage`. Например, вот
-ссылка на живую версию для этого репозитория
-[https://goitacademy.github.io/react-homework-template](https://goitacademy.github.io/react-homework-template).
-
-Если открывается пустая страница, убедись что во вкладке `Console` нет ошибок
-связанных с неправильными путями к CSS и JS файлам проекта (**404**). Скорее
-всего у тебя неправильное значение свойства `homepage` в файле `package.json`.
-
-### Маршрутизация
-
-Если приложение использует библиотеку `react-router-dom` для маршрутизации,
-необходимо дополнительно настроить компонент `<BrowserRouter>`, передав в пропе
-`basename` точное название твоего репозитория. Слеш в начале строки обязателен.
-
-```jsx
-<BrowserRouter basename="/your_repo_name">
-  <App />
-</BrowserRouter>
-```
-
-## Как это работает
-
-![How it works](./assets/how-it-works.png)
-
-1. После каждого пуша в ветку `main` GitHub-репозитория, запускается специальный
-   скрипт (GitHub Action) из файла `.github/workflows/deploy.yml`.
-2. Все файлы репозитория копируются на сервер, где проект инициализируется и
-   проходит линтинг и сборку перед деплоем.
-3. Если все шаги прошли успешно, собранная продакшн версия файлов проекта
-   отправляется в ветку `gh-pages`. В противном случае, в логе выполнения
-   скрипта будет указано в чем проблема.
+michalwojcik4
