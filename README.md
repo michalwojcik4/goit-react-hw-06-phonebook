@@ -9,6 +9,10 @@ using Redux Toolkit.
 - Delete contacts.
 - Filter contacts by name.
 
+## Demo
+
+https://michalwojcik4.github.io/goit-react-hw-06-phonebook/
+
 ## Getting Started
 
 1. Clone the repository:
