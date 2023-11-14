@@ -39,8 +39,6 @@ const ContactForm = ({ onAddContact }) => {
             type="text"
             name="name"
             placeholder="Imie i Nazwisko"
-            //pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-            title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
             required
             value={name}
             onChange={handleChange}
@@ -51,8 +49,8 @@ const ContactForm = ({ onAddContact }) => {
             className={css.form__input}
             type="tel"
             name="number"
-            placeholder="123 123 123"
-            //pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+            placeholder="123123123"
+            pattern="[0-9]{3}[0-9]{3}[0-9]{3}"
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required
             value={number}
