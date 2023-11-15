@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import css from './ContactItem.module.css';
 
@@ -18,3 +19,8 @@ const ContactItem = ({ contact, onDeleteContact }) => (
 );
 
 export default ContactItem;
+
+ContactItem.propTypes = {
+  contact: PropTypes.object,
+  onDeleteContact: PropTypes.func,
+};
